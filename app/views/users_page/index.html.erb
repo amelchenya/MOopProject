@@ -1,0 +1,26 @@
+<h3><h3><%=t("users.allusers")%>
+</h3>
+
+<table class="table table-bordered">
+  <tr>
+    <th><%=t("users.name")%></th>
+    <th scope="col"><%=t("users.date")%></th>
+    <th scope="col"><%=t("users.email")%></th>
+    <th scope="col"><%=t("users.change")%></th>
+  </tr>
+
+  <% for user  in @users%>
+    <tr>
+      <td><%=link_to user.username ,users_page_path(user),class: "text-dark"%>
+      </td>
+
+      <td><%=user.created_at %></td>
+      <td><%=user.email %></td>
+      <td><%= link_to t("posts.redaction"), edit_users_page_path(user),class: "text-dark"%>
+     <ruby>,</ruby>
+      <%=link_to t("posts.delete"),users_page_path(user),class: "text-dark", method: :delete, data:{ confirm: 'Хотите удалить ?' }%>
+    </td>
+
+  </tr>
+<%end%>
+</table>

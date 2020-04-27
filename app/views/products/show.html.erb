@@ -1,0 +1,24 @@
+
+         <div class="image">
+              <%= image_tag  ("cake.jpg"), size: '600x398'%>
+          </div>
+        
+
+        <%=@product.name%>
+           <br>
+        <%=@product.cost%> руб.<br>
+        <%= @product.body%>
+    
+  
+       Описание
+      <%=sanitize @product.about%>
+<%= render 'showCharacteristics'%>
+<%= render 'formCharacteristics'%>
+
+<br>
+<br>
+
+
+
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'%>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
+      <a class="navbar-brand" href="#"><%=link_to "Главная" , products_path,class: "text-light"%></a>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+
+          <% if user_signed_in? %>
+            &emsp;
+            <%=link_to current_user.email , users_page_path(current_user),class:"text-light"%>
+            &emsp;
+
+          <%else%>
+            &emsp;
+            <%=link_to "Зарегистироваться" ,new_user_registration_path,class:"text-light"%>
+            &emsp;
+            <%=link_to "Войти" ,new_user_session_path,class:"text-light"%>
+
+          <% end %>
+
+          &emsp;
+        
+        </ul>
+
+        <% if user_signed_in? %>
+        <% if current_user.roll=="admin" %>
+            <%=link_to "Добавить товар" , new_product_path,class:"text-light"%>
+                &emsp;
+            <%=link_to "Добавить категорию" , new_category_path,class:"text-light"%>
+             &emsp;
+          <%end%>
+          <%=link_to "Редактировать аккаунт" ,edit_user_registration_path,class:"text-light"%>
+          &emsp;
+          <% if   current_user.roll =="admin" %>
+
+            <%= link_to "Все пользователи",users_page_index_path,class:"text-light"%>
+            &emsp;
+
+           
+          <%end%>
+          &emsp;
+          <%=link_to "Выйти" ,destroy_user_session_path ,method: :delete,class:"text-light"%>
+          &emsp;
+        <% end %>
+      </div>
+    </nav>
+<br>
+    <br>
+    <br>
+    <div class="container">
+      <% flash.each do |name, msg| %>
+        <div class="alert alert-success">
+        <%=msg%>
+        </div>
+      <% end %>
+    </div>
+    
+    <div class="container ">
+
+      <%= yield %>
+    </div>
+    
+  </body>
+
+</html>

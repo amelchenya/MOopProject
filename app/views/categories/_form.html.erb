@@ -1,0 +1,15 @@
+<%= form_for @category do |f| %>
+
+    <div class="field">
+      <%=f.text_field :name ,class: "form-control",type:"text",placeholder: "Название"%><br/>
+    <div>
+
+  <div class="field">
+     <%=f.submit "Добавить" ,class:"btn btn-secondary"%>
+     <%=link_to "Назад",:back,class: "btn btn-outline-danger"%>
+  </div>
+
+
+
+
+<%end%>

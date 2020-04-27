@@ -1,0 +1,19 @@
+<h3 class=" font-italic ">
+  <%="Характеристики"%>
+</h3>
+
+
+<table class="table">
+ 
+  <tbody>
+  <%@product.characteristics.each  do |characteristic|%>
+    <tr>
+     
+      <td><h3><%=characteristic.name%></h3></td>
+      <td><h4><%=characteristic.about%></h4></td>
+      <td><%=link_to "Удалить характеристику",[characteristic.product, characteristic], method: :delete, data:{ confirm: 'Хотите удалить ?' },class:"text-dark" %> <br></td>
+    </tr>
+   
+   <% end %>
+  </tbody>
+</table>

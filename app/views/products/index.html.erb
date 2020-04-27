@@ -1,0 +1,45 @@
+
+
+  
+ <hr>
+
+
+
+    <div class="container">
+       <div class="form-inline mt-6 mt-md-0">
+<h2>Все продукты </h2>   &emsp;
+<%= form_tag products_path, :method => 'get' do%>
+<%= text_field_tag :search ,params[:search],class:"form-control "%>
+<%=submit_tag "Поиск",class:"btn btn-outline-dark"%>
+<%end%>
+</div>
+
+    Сортировать:    <%=link_to "названию",:sort =>"name"%> | 
+        <%=link_to "стоимости",:sort =>"cost"%>
+      <div class="row">
+      <% for product  in @products%>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm body-center">
+            <%= image_tag  ("cake.jpg"), size: '338x200'%>
+            <div class="card-body text-center">
+              <p class="card-text "><h5><%=link_to product.name,product_path(product),class:"text-dark"%></h5></p>
+              <h4 class="color_cost"> <%=product.cost%> $.</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                 <% if user_signed_in? %>
+                <%if current_user.roll=="admin"%>
+                     <%=link_to "Быстрый просмотр",product_path(product),class:"btn btn-outline-dark"%>
+                     <%=link_to "Редактировать",edit_product_path(product),class:"btn btn-outline-dark"%>
+                  <%end%>
+                    <%end%>
+                </div>
+                <small class="text-muted"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+          <%end%>
+          </div>
+           
+        </div>
+

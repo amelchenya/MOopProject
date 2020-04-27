@@ -1,0 +1,35 @@
+<%= form_for @product, html: {multipart: true } do |f| %>
+
+<%if @product.errors.any?%>
+  <%@product.errors.full_messages.each do |msg| %>
+    <div class="alert alert-danger">
+       <%=msg%>
+    </div>
+  <%end%>
+<%end%>
+
+    <div class="input-group">
+       <%=f.text_field :name,class: "form-control",type:"text",placeholder: "название"%>
+    </div><br>
+
+        <div class="field">
+          <%=f.text_area :body,class: "form-control",type:"text",placeholder: "характеристики "%><br>   
+        </div>
+
+        
+        <div class="field">
+          <%=f.text_field :cost,class: "form-control",type:"text",placeholder: "стоимость"%><br>
+        </div>
+         <div class="field">
+          <%=f.collection_select :category_id,Category.order(:name),:id,:name,{include_blank: true},class:"form-control"%><br>
+        </div>
+
+        <div class="field">
+          <%=f.text_area :about,class: "form-control",type:"text",placeholder: "описание"%><br>        
+        </div>
+
+        <div class="field">
+          <%=f.submit "Добавить товар ",class: "btn btn-outline-dark" %>
+        </div>
+
+      <%end%>

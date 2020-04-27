@@ -1,0 +1,9 @@
+
+<%= form_for ([@product,@product.characteristics.build]) do |f|%>
+
+<%=f.text_field :name,class: "form-control",placeholder: "название"%><br>
+
+<%=f.text_field :about,class: "form-control",type:"text",placeholder: "описание"%>
+<br>
+<%=f.submit "Добавить характеристику", class: 'btn btn-outline-primary' %>
+<%end%>
