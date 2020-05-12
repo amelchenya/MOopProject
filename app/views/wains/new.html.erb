@@ -1,0 +1,27 @@
+<div class="container">
+
+<%= form_for @wain, html: { multipart: true }, url: product_wains_path, html: { method: :post } do |f|%>
+
+
+<%=f.text_field :name,value:@product.name ,class:"text_field_wains text-center"%><br><br><br>
+    
+<%=f.number_field :cost,value:@product.cost,class:"text_field_wains text-center"%><br><br><br>
+ <%=f.number_field :count,value:1 , step: 1 ,class:"text_field_wains text-center"%><br><br>
+
+<div class="image_wains">
+<%= image_tag @product.image_url, size: '303x280',class:"scale "%>
+
+</div>
+
+      <div class="field">
+          <%=f.hidden_field :image,value:@product.image %><br>
+        </div>
+       
+<div class="btn_div_class">
+        <div class="field">
+          <%=f.submit "Добавить товар ",class: "btn btn-outline-dark" %>
+        </div>
+        </div>
+
+      <%end%>
+      </div>

@@ -1,23 +1,48 @@
 
-         <div class="image">
-              <%= image_tag  ("cake.jpg"), size: '600x398'%>
-          </div>
+
+<div class="container2">
+       <h2> <%=@product.name%> </h2>
+          <%= image_tag @product.image_url, size: '480x480'%>
         
 
-        <%=@product.name%>
+       
            <br>
-        <%=@product.cost%> руб.<br>
-        <%= @product.body%>
-    
-  
-       Описание
+           <div class="cost_show_product">
+              <%=@product.cost%> руб.<br>
+           </div>
+           <div class="body_show">
+               <%= @product.body%>
+                <% if user_signed_in? %>
+            &emsp;
+              <% if current_user.roll=="admin" %>
+                <%=link_to "Редактировать ",edit_product_path(@product)%>
+  <%= link_to "Удалить", product_path(@product), method: :delete, data:{ confirm: 'Хотите удалить ?' }%> 
+
+         <% end %>
+ <% end %>
+
+ <div class="about_show{">
+       
       <%=sanitize @product.about%>
+      </div>
+      
+<%=link_to "Добавить в корзину ",new_product_wain_path(@product),class:" btn btn_show_pr text-light"%>
+
+        </div>
+      <div class="cha_left_show">
 <%= render 'showCharacteristics'%>
+ <% if user_signed_in? %>
+            &emsp;
+              <% if current_user.roll=="admin" %>
 <%= render 'formCharacteristics'%>
-
+<%end%>
+<%end%>
+</div>
 <br>
-<br>
 
+
+</div>
+ 
 
 
 

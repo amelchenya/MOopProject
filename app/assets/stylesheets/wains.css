@@ -1,0 +1,145 @@
+.text_field_wains{
+    position: absolute;
+    width: 440px;
+    height: 48px;
+    left: 352px;
+ 
+    
+    border: 1px solid #3E3E3E;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+.image_wains{
+    position: absolute;
+width: 606px;
+height: 580px;
+left: 40px;
+top: -50px;
+}
+.btn_div_class{
+    position: absolute;
+    width: 440px;
+    height: 48px;
+    left: 352px;
+}
+.text_card{
+    position: absolute;
+    width: 143px;
+    height: 42px;
+    left: 100px;
+    top: 138px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+.count_product{
+
+    position: absolute;
+width: 98px;
+height: 28px;
+left: 100px;
+top: 225px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #000000;
+
+}
+.count{
+    position: absolute;
+    width: 134px;
+    height: 28px;
+    left: 702px;
+    top: 225px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #000000;
+
+}
+.cost_wains{
+   
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #000000;
+    
+}
+
+.name_product_wains{
+
+
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #000000;
+}
+.cost_product_wains_t{
+
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+}
+.wains_cost_summ{
+
+
+
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+
+color: #000000;
+}
+.btn_bought{
+
+    
+position: absolute;
+width: 276px;
+height: 54px;
+left: 800px;
+
+
+background: #FF7A00;
+border-radius: 7px;
+}
+.text_btn{
+
+ 
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+
+color: #FFFFFF;
+}

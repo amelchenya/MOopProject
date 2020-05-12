@@ -1,0 +1,28 @@
+<div class="name_bought">
+Имя
+</div>
+<div class="number_bought">
+Номер телефона
+</div>
+<div class="street_bought">
+Адрес доставки
+</div>
+<div class="text_payment_field">
+Способ оплаты
+</div>
+
+
+
+
+<%= form_for @bought do |f| %>
+
+<%=f.text_field :name,value:current_user.username ,class:"text_field_name"%>
+
+<%=f.select  :payment,[['Доставка курьером', 1], ['Самовывоз', 2]],class:" select_field"%>
+
+<%=f.telephone_field :number_tel,class:"tel_field text-center"%>
+<%=f.text_field :street ,class:"street_field text-center"%>
+
+<%=f.submit "Заказать ",class:" btn btn_bought_pay text_btn"%>
+
+<%  end %>

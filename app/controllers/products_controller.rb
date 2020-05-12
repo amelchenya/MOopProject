@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
     before_action :authenticate_user!, except:[:index,:show]
- 
+  
     def index
       @products=Product.where(["name LIKE ?","%#{params[:search]}%"]).order(params[:sort])
     end
@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
     end
   
     def new
+      
       @product = Product.new
     end
     def edit
@@ -27,6 +28,7 @@ class ProductsController < ApplicationController
       end
     end
   
+
   
       def create
         @product = Product.new(product_params)
@@ -40,20 +42,20 @@ class ProductsController < ApplicationController
         end
        end
   
-    def destroy
+
+       def destroy
         @product=Product.find(params[:id])
-      if  (current_user.roll =="admin")
-        @products.destroy
-        redirect_to posts_path
-      else
-        flash[:error] =  "Ошибка"
+        @product.destroy
         redirect_to products_path
-      end
+     
     end
   
  
       private  def product_params
-        params.require(:product).permit(:name,:body,:picture,:about,:cost,:url)
+        params.require(:product).permit(:name,:body,:picture,:about,:cost,:url,:category_id,:image)
       end
+      
+
+
   
 end

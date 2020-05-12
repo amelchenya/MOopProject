@@ -12,22 +12,41 @@
 
   <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
-      <a class="navbar-brand" href="#"><%=link_to "Главная" , products_path,class: "text-light"%></a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top  ">
+      <div class="text_company">
+     Devise
+     </div>
+     <%=link_to "Главная" , new_search_path,class: "home_link tex-light"%>
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
 
           <% if user_signed_in? %>
             &emsp;
+              <% if current_user.roll=="admin" %>
+            <%=link_to "Добавить товар" , new_product_path,class:"text-light"%>
+                &emsp;
+            <%=link_to "Добавить категорию" , new_category_path,class:"text-light"%>
+             &emsp;
+              <%= link_to "Все пользователи",users_page_index_path,class:"text-light"%>
+            &emsp;
+          <%end%>
             <%=link_to current_user.email , users_page_path(current_user),class:"text-light"%>
             &emsp;
+ 
+           <div class="registration_navbar">
+                 <%=link_to "Корзина", wains_path,class:"text-light"%>
+           </div>
+            &emsp;
+            <%=link_to "Выйти" ,destroy_user_session_path ,method: :delete,class:"link_sign_in"%>
 
           <%else%>
             &emsp;
-            <%=link_to "Зарегистироваться" ,new_user_registration_path,class:"text-light"%>
+           <div class="registration_navbar">
+               Корзина
+           </div>
             &emsp;
-            <%=link_to "Войти" ,new_user_session_path,class:"text-light"%>
+            <%=link_to "Войти" ,new_user_session_path,class:"link_sign_in"%>
 
           <% end %>
 
@@ -35,44 +54,23 @@
         
         </ul>
 
-        <% if user_signed_in? %>
-        <% if current_user.roll=="admin" %>
-            <%=link_to "Добавить товар" , new_product_path,class:"text-light"%>
-                &emsp;
-            <%=link_to "Добавить категорию" , new_category_path,class:"text-light"%>
-             &emsp;
-          <%end%>
-          <%=link_to "Редактировать аккаунт" ,edit_user_registration_path,class:"text-light"%>
-          &emsp;
-          <% if   current_user.roll =="admin" %>
-
-            <%= link_to "Все пользователи",users_page_index_path,class:"text-light"%>
-            &emsp;
-
-           
-          <%end%>
-          &emsp;
-          <%=link_to "Выйти" ,destroy_user_session_path ,method: :delete,class:"text-light"%>
-          &emsp;
-        <% end %>
+       
       </div>
     </nav>
 <br>
     <br>
     <br>
-    <div class="container">
-      <% flash.each do |name, msg| %>
-        <div class="alert alert-success">
-        <%=msg%>
-        </div>
-      <% end %>
-    </div>
+    <br>
+    <br>
+    <br>
     
-    <div class="container ">
+    
+   
 
       <%= yield %>
-    </div>
-    
+  
+  
+
   </body>
 
 </html>

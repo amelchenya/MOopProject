@@ -1,0 +1,92 @@
+
+
+  <style>
+   .scale {
+    display: inline-block; /* Строчно-блочный элемент */
+    overflow: hidden; /* Скрываем всё за контуром */
+   }
+   .scale img {
+    transition: 1s; /* Время эффекта */
+    display: block; /* Убираем небольшой отступ снизу */
+   }
+   .scale img:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+   }
+  </style>
+
+<div class="category_position  ">
+
+<%=link_to "Каталог и товары",products_path,class:"category_link"%>
+<br>
+<br>
+<br>
+<br>
+
+  <% for category  in Category.all%>
+ 
+<div class="category_pos_index">
+<%=link_to category.name,category,class:"text-dark"%>
+</div><br>
+ <hr>
+<%end%>
+</div>
+
+
+<div class="container">
+
+
+       <div class="form-inline mt-6 mt-md-0">
+
+<%= form_tag products_path, :method => 'get' do%>
+<%= text_field_tag :search ,params[:search],class:"form-control "%>
+<%=submit_tag "Поиск",class:"btn btn-outline-dark"%>
+<%end%>
+</div>
+
+    Сортировать:    <%=link_to "названию",:sort =>"name"%> | 
+        <%=link_to "стоимости",:sort =>"cost"%>
+      <div class="row">
+      
+    <% @search.search_products.each do |product| %>
+ 
+        <div class="col-md-4 ">
+          <div class=" mb-1  ">
+          <div class="background_product text-center">
+          <div class="scale">
+            <%= image_tag product.image_url, size: '296x262',class:"scale"%>
+          </div>
+            <div class="card-body text-center">
+              <p class="card-text "><h5><%=link_to product.name,product_path(product),class:"text-dark"%></h5></p>
+              <div class="cost">
+               <%=product.cost%> $.
+               </div>
+            
+             
+               
+                
+                     <%=link_to "Быстрый просмотр",product_path(product),class:" btn show_in_product_btn "%>
+                
+             
+          
+            </div>
+            </div>
+          </div>
+        </div>
+          <%end%>
+          </div>
+           
+       
+    <footer>
+      
+       <div class="devise_text">
+       Divise
+      </div>
+      <div class="contact_text">
+      Телефон: 8 (044) 512-25-15 Почта: device.365@gmail.com Главный офис: Минск, пр-т Независимости, 44
+      </div>
+      <div class="info_text_contact">
+      Контакты
+      </div>
+</footer>
+ </div>
+

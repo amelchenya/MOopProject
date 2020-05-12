@@ -1,0 +1,93 @@
+.btn_login{
+    position: absolute;
+    width: 276px;
+    height: 54px;
+    left: 951px;
+    top: 433px;
+    
+    background: #FF7A00;
+    border-radius: 7px;
+
+  
+}
+.text_btn_login{
+
+  
+    
+    font-family: Roboto;
+    font-style: normal;
+
+    
+    color: #FFFFFF;
+    
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
+}
+.text_registration_link{
+
+    position: absolute;
+width: 443px;
+height: 21px;
+left: 867px;
+top: 497px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+
+
+color: #525252;
+}
+.title_login{
+    position: absolute;
+    width: 438px;
+    height: 42px;
+    left: 869px;
+    top: 227px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    
+    color: #000000;
+}
+.text_field_login{
+    position: absolute;
+width: 505px;
+height: 48px;
+left: 835px;
+top: 299px;
+
+border: 1px solid #3E3E3E;
+box-sizing: border-box;
+border-radius: 7px;
+}
+.text_field_password{
+
+    position: absolute;
+    width: 505px;
+    height: 48px;
+    left: 835px;
+    top: 359px;
+    
+    border: 1px solid #3E3E3E;
+    box-sizing: border-box;
+    border-radius: 7px;
+    
+    
+}
+.image_signIn{
+    position: absolute;
+width: 606px;
+height: 580px;
+left: 60px;
+top: 151px;
+}

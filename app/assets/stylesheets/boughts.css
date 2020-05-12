@@ -1,0 +1,181 @@
+.name_bought{
+    position: absolute;
+width: 49px;
+height: 28px;
+left: 100px;
+top: 258px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #000000;
+
+
+}
+.number_bought{
+
+    position: absolute;
+    width: 189px;
+    height: 28px;
+    left: 100px;
+    top: 414px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #000000;
+
+}
+.street_bought{
+    position: absolute;
+width: 212px;
+height: 28px;
+left: 100px;
+top: 492px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #000000;
+}
+.del_bought{
+    position: absolute;
+width: 195px;
+height: 28px;
+left: 100px;
+top: 648px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #000000;
+
+}
+.pay_bought{
+    position: absolute;
+width: 174px;
+height: 28px;
+left: 100px;
+top: 726px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #000000;
+}
+.text_field_name{
+
+    position: absolute;
+    width: 440px;
+    height: 48px;
+    left: 352px;
+    top: 248px;
+    
+    border: 1px solid #3E3E3E;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+.street_field{
+
+    position: absolute;
+    width: 440px;
+    height: 48px;
+    left: 352px;
+    top: 482px;
+    
+    border: 1px solid #3E3E3E;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+.tel_field{
+    position: absolute;
+width: 440px;
+height: 48px;
+left: 352px;
+top: 404px;
+
+border: 1px solid #3E3E3E;
+box-sizing: border-box;
+border-radius: 7px;
+}
+
+.text_payment_field{
+
+    position: absolute;
+    width: 212px;
+    height: 28px;
+    left: 100px;
+    top: 336px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #000000;
+
+}
+.btn_bought_pay{
+
+    position: absolute;
+width: 276px;
+height: 54px;
+left: 100px;
+top: 621px;
+
+background: #FF7A00;
+border-radius: 7px;
+}
+.cost_show_product{
+    position: absolute;
+    width: 100px;
+    height: 28px;
+    left: 860px;
+    top: 12px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #000000;
+
+}
+.body_show{
+
+    position: absolute;
+    width:700px;
+    height: 220px;
+    left: 60px;
+
+}
+.about_show{
+    
+    position: absolute;
+    width:700px;
+    height: 220px;
+    left: 60px;
+}
+.btn_show_pr{
+
+
+
+    background: #FF7A00;
+border-radius: 7px;
+}

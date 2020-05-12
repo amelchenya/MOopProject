@@ -26,7 +26,7 @@ class CharacteristicsController < ApplicationController
   end
   
   def destroy
-    @product=Product.find(params[:product_id])
+   
     @characteristic = Characteristic.find(params[:id])
     @characteristic.destroy
      redirect_to @product

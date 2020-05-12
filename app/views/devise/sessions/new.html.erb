@@ -1,75 +1,47 @@
-
+<div class="">
 <div class="card_login text-center">
-<div class="login_pos">
-<h2>Log in</h2>
+<div class="title_login">
+<h2>Войти в личный кабинет</h2>
 </div>
+
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-<style>
-
-.form-control{
-
-width: 140px;  
+<div class="image_signIn">
+  <%= image_tag  ("image 18.jpg"), size: '606x508'%>
+</div>
  
-  background-color:  #ffffff!important;
-
-}
-
-.form-control:focus {
-    -webkit-box-shadow: none;
-    outline: -webkit-focus-ring-color auto 0px;
-  background-color:  #ffffff!important;
-}
-.form_control .content{
-        background-color:  #ffffff!important;
-  }
-.field{
-position: absolute;
-width: 237px;
-height: 40px;
-left: 82px;
-top: 90px;
- background-color:  #96d3ec!important;
-  background-color:  #ffffff!important;
-border: 1px solid rgba(0, 0, 0, 0.5);
-box-sizing: border-box;
-
-}
-.field_pass{
-  position: absolute;
-width: 237px;
-height: 40px;
-left: 82px;
-top: 137px;
-
-background: #FFFFFF;
-border: 1px solid rgba(0, 0, 0, 0.5);
-box-sizing: border-box;
-}
-.other{
- position: absolute;
-width: 237px;
-height: 40px;
-left: 82px;
-top: 200px;
-
-
-
-}
-</style>
- 
- 
-    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email",class:"form-control field" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:" Логин",class:"text_field_login text_login_in_field" %>
     
-    <%= f.password_field :password, autocomplete: "current-password",placeholder:"Password",class:"form-control field_pass" %>
+    <%= f.password_field :password, autocomplete: "current-password",placeholder:" Пароль",class:"text_field_password" %>
  
-<div class="other">
 
-  <div class="actions">
-    <%= f.submit "Log in",class:"btn btn-outline-dark" %>
-  </div>
-  <%= render "devise/shared/links" %>
-  </div>
+
+  
+  
+    <%= f.submit "Войти",class:"btn_login text_btn_login" %>
+<div class="text_registration_link">
+Вы еще не зарегистрированы?
+  <%= link_to "Зарегистрироваться", new_registration_path(resource_name) %><br />
+  
+</div>
+
 <% end %>
 
 </div>
+
+</div>
+  
+    <footer class="footer_devise">
+
+ <div class="devise_text">
+       Divise
+      </div>
+      <div class="contact_text">
+      Телефон: 8 (044) 512-25-15 Почта: device.365@gmail.com Главный офис: Минск, пр-т Независимости, 44
+      </div>
+      <div class="info_text_contact">
+      Контакты
+      </div>
+
+</footer>
 

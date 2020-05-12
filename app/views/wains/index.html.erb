@@ -1,0 +1,57 @@
+ <div class="text_card">
+ Корзина
+ </div>
+
+
+
+ 
+  <div class="container">
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      
+      <th scope="col">Количество товара <%=@wains.count%></th>
+      <th scope="col">Количество</th>
+      <th scope="col">Цена</th>
+    </tr>
+  </thead>
+  <tbody>
+   <% for wain  in @wains%>
+    <tr>
+     
+      <td> <%=image_tag(Wain.progress(wain), height: '207', width: '184')%>
+           <%=wain.name%>
+      </td>
+      <td><br><br><br><div class="cost_product_wains_t"><%=wain.count%></div></td>
+      <td><br><br><br><div class="cost_product_wains_t"><%=wain.cost%> руб.</div></td>
+    
+      <td> 
+</td>
+
+    </tr>
+    
+ <%end%>
+
+   
+  </tbody>
+</table>
+<div class="wains_cost_summ">
+ <%=link_to "Оформить заказ",new_bought_path,class:"btn btn_bought text_btn"%>
+ Сумма: <%=Wain.summCost(@wains)%> руб.
+ <br>
+  <br>
+   <br>
+</div>
+<footer>
+      
+       <div class="devise_text">
+       Divise
+      </div>
+      <div class="contact_text">
+      Телефон: 8 (044) 512-25-15 Почта: device.365@gmail.com Главный офис: Минск, пр-т Независимости, 44
+      </div>
+      <div class="info_text_contact">
+      Контакты
+      </div>
+</footer>
+</div>

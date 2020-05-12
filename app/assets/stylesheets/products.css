@@ -1,0 +1,347 @@
+.navbar{
+  position: absolute;
+
+  height: 110px;
+  left: 0px;
+  top: 0px;
+  
+  background: #1C1C1C;
+
+}
+.text_company{
+
+  
+  font-family: Rock Salt;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 115px;
+  
+  color: #FFFFFF;
+
+}
+.home_link {
+  position: absolute;
+  width: 92px;
+  height: 28px;
+  left: 1018px;
+  top: 41px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  
+  color: #FFFFFF;
+  
+
+}
+.home_link:visited {
+  color: #FFFFFF;
+}
+.link_sign_in{
+  position: absolute;
+width: 54px;
+height: 28px;
+left: 1286px;
+top: 41px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #FF7A00;
+
+}
+.link_sign_in:visited {
+  color: #FF7A00;
+}
+.registration_navbar{
+  position: absolute;
+width: 96px;
+height: 28px;
+left: 1150px;
+top: 41px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #FFFFFF;
+}
+.background_product{
+
+  
+  background: #FFFFFF;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+
+}
+.cost{
+ 
+ 
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  
+  color: #000000;
+  
+  
+}
+.link_in_product{
+ 
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+
+color: #000000;
+
+}
+.show_in_product_btn{
+
+  
+  border: 1px solid #7A7A7A;
+  box-sizing: border-box;
+  border-radius: 7px;
+
+}
+.text_btn_in_pr_btn{
+
+
+}
+
+.footer_devise{
+
+
+  position: absolute;
+  width: 1520px;
+  height: 290px;
+  left: 0px;
+  top: 840px;
+  
+  background: #1C1C1C;
+}
+.devise_text{
+  position: absolute;
+width: 181px;
+height: 110px;
+left: 100px;
+
+
+font-family: 'Rock Salt';
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 86px;
+
+color: #FFFFFF;
+}
+.contact_text{
+
+  position: absolute;
+  width: 438px;
+  height: 69px;
+  left: 902px;
+  top: 100px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  
+  color: #FBFBFB;
+}
+.info_text_contact{
+
+  position: absolute;
+  width: 167px;
+  height: 56px;
+  left: 902px;
+  top: 60px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  
+  color: #FFFFFF;
+}
+footer{
+ 
+  position: absolute;
+  width: 1520px;
+  height: 290px;
+  left: -350px;
+
+  
+  background: #1C1C1C;
+}
+.category_position{
+  position: absolute;
+  width: 350px;
+  height: 700px;
+  left: 0px;
+  top: 110px;
+  
+  background: #FFFFFF;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+
+}
+.container{
+  position: absolute;
+
+  left: 350px;
+}
+.category_link{
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  left: 100px;
+  top: 50px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  
+  color: #FF7A00;
+  
+}
+.category_pos_index{
+  position: absolute;
+left: 100px;
+
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+color: #000000;
+
+}
+
+.name_field{
+  position: absolute;
+width: 505px;
+height: 48px;
+left: 835px;
+top: 299px;
+
+border: 1px solid #3E3E3E;
+box-sizing: border-box;
+border-radius: 7px;
+}
+.username_field{
+
+  position: absolute;
+width: 505px;
+height: 48px;
+left: 835px;
+top: 359px;
+
+border: 1px solid #3E3E3E;
+box-sizing: border-box;
+border-radius: 7px;
+}
+.password_field{
+  position: absolute;
+  width: 505px;
+  height: 48px;
+  left: 836px;
+  top: 419px;
+  
+  border: 1px solid #3E3E3E;
+  box-sizing: border-box;
+  border-radius: 7px;
+
+}
+.password_new_field{
+
+  position: absolute;
+width: 505px;
+height: 48px;
+left: 836px;
+top: 479px;
+
+border: 1px solid #3E3E3E;
+box-sizing: border-box;
+border-radius: 7px;
+}
+.registration_btn{
+
+  position: absolute;
+width: 276px;
+height: 54px;
+left: 950px;
+top: 553px;
+
+background: #FF7A00;
+border-radius: 7px;
+
+}
+.text_registration{
+  position: absolute;
+  width: 235px;
+  height: 28px;
+  left: 971px;
+  top: 567px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  
+  color: #FFFFFF;
+
+}
+.registration_text{
+
+  position: absolute;
+  width: 438px;
+  height: 42px;
+  left: 869px;
+  top: 227px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  
+  color: #000000;
+
+}
+.container2{
+  position: absolute;
+
+  left: 200px;
+}
+.cha_left_show{
+  position: absolute;
+  width: 438px;
+  height: 142px;
+  left: 769px;
+  top: 127px;
+
+
+
+}

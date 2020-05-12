@@ -1,25 +1,73 @@
-<% if  current_user.roll =="admin"%>
-       <h1><%= @category.name%>
-       <%=link_to t("posts.redaction"),edit_category_path(@category),class:"btn btn-outline-danger"%>
-       <%=link_to t("posts.delete"),category_path(@category),method: :delete, data: { confirm: "Are you sure ?"} ,class:"btn btn-outline-danger"%>
-       </h1>
-   <%end%>
+<div class="category_position  ">
+
+<%=link_to "Каталог и товары",products_path,class:"category_link"%>
+<br>
+<br>
+<br>
+<br>
+
+  <% for category  in Category.all%>
+ 
+<div class="category_pos_index">
+<%=link_to category.name,category,class:"text-dark"%>
+</div><br>
+ <hr>
+<%end%>
+</div>
 
 
+<div class="container">
+       <div class="form-inline mt-6 mt-md-0">
 
-<table class="table table-striped">
-  <tr>
-    <th class="text-dark">
-      <span class="text-dark" ><%= t("categories.name")%> </span></th>
-    <th  <span class="text-dark" ><%=t("categories.current")%> </span></th>
+<%= form_tag products_path, :method => 'get' do%>
+<%= text_field_tag :search ,params[:search],class:"form-control "%>
+<%=submit_tag "Поиск",class:"btn btn-outline-dark"%>
+<%end%>
+</div>
 
-
-  <%@category.products.each  do|product|%>
-    <tr>
-      <td><%=link_to product.title,product_path(product)%>
-      </td>
-
-     
-      </tr>
-      <%end%>
-</table>
+    Сортировать:    <%=link_to "названию",:sort =>"name"%> | 
+        <%=link_to "стоимости",:sort =>"cost"%>
+      <div class="row">
+      
+      <%@category.products.each  do|product|%>
+ 
+        <div class="col-md-4 ">
+          <div class=" mb-1  ">
+          <div class="background_product text-center">
+            <%= image_tag  ("image 1.jpg"), size: '296x262'%>
+            <div class="card-body text-center">
+              <p class="card-text "><h5><%=link_to product.name,product_path(product),class:"text-dark"%></h5></p>
+              <div class="cost">
+               <%=product.cost%> $.
+               </div>
+             
+               
+                 <% if user_signed_in? %>
+                <%if current_user.roll=="admin"%>
+                     <%=link_to "Быстрый просмотр",product_path(product),class:" btn show_in_product_btn "%>
+                  
+                  <%end%>
+                    <%end%>
+             
+          
+            </div>
+            </div>
+          </div>
+        </div>
+          <%end%>
+          </div>
+           
+       
+    <footer>
+      
+       <div class="devise_text">
+       Divise
+      </div>
+      <div class="contact_text">
+      Телефон: 8 (044) 512-25-15 Почта: device.365@gmail.com Главный офис: Минск, пр-т Независимости, 44
+      </div>
+      <div class="info_text_contact">
+      Контакты
+      </div>
+</footer>
+ </div>
